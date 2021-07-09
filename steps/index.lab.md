@@ -75,8 +75,8 @@ Although authentication isn't the focus of this codelab, it's important to have 
 
 You'll need to enable **Anonymous login.**
 
-1. In the Firebase console, locate the **Develop** section in the left nav.
-2. Click **Authentication**, then click the **Sign-in method** tab (or  [click here](https://console.firebase.google.com/project/_/authentication/providers) to go directly there).
+1. In the Firebase console, locate the **Build** section in the left nav.
+2. Click **Authentication**, then click the **Sign-in method** tab (or [click here](https://console.firebase.google.com/project/_/authentication/providers) to go directly there).
 3. Enable the **Anonymous** Sign-in Provider, then click **Save**.
 
 <img src="img/img7.png" alt="img7.png"  width="624.00" />
@@ -87,7 +87,7 @@ This will allow the application to silently sign in your users when they access 
 
 The app uses Cloud Firestore to save and receive restaurant information and ratings.
 
-You'll need to enable Cloud Firestore.  In the Firebase console's **Develop** section, click **Firestore**. Click **Create database** in the Cloud Firestore pane.
+You'll need to enable Cloud Firestore.  In the Firebase console's **Build** section, click **Firestore Database**. Click **Create database** in the Cloud Firestore pane.
 
 Access to data in Cloud Firestore is controlled by Security Rules.  We'll talk more about rules later in this codelab but first we need to set some basic rules on our data to get started.  In the  [Rules tab](https://console.firebase.google.com/project/_/database/firestore/rules) of the Firebase console add the following rules and then click **Publish**.
 
@@ -118,7 +118,7 @@ Clone the  [GitHub repository](https://github.com/firebase/friendlyeats-web) fro
 git clone https://github.com/firebase/friendlyeats-web
 ```
 
-The sample code should have been cloned into the 📁`friendlyeats-web` directory, make sure your command line are ran from this directory from now on: 
+The sample code should have been cloned into the 📁`friendlyeats-web` directory. From now on, make sure to run all your commands from this directory: 
 
 ```console
 cd friendlyeats-web
@@ -217,11 +217,11 @@ In this section, we'll write some data to Cloud Firestore so that we can populat
 
 ### Data Model
 
-Firestore data is split into collections, documents, fields, and subcollections. We will store each restaurants as a document in a top-level collection called `restaurants`.
+Firestore data is split into collections, documents, fields, and subcollections. We will store each restaurant as a document in a top-level collection called `restaurants`.
 
 <img src="img/img3.png" alt="img3.png"  width="333.60" />
 
-Later, we'll store each reviews in a subcollection called `ratings` in each restaurants.
+Later, we'll store each review in a subcollection called `ratings` under each restaurant.
 
 <img src="img/img4.png" alt="img4.png"  width="295.53" />
 
@@ -521,7 +521,7 @@ Duration: 05:00
 
 At the beginning of this codelab, we set our app's security rules to completely open the database to any read or write. ***In a real application, we'd want to set much more fine-grained rules to prevent undesirable data access or modification.***
 
-1. In the Firebase console's **Develop** section, click **Database**.
+1. In the Firebase console's **Build** section, click **Firestore Database**.
 2. Click the **Rules** tab in the Cloud Firestore section (or  [click here](https://console.firebase.google.com/project/_/database/firestore/rules) to go directly there).
 3. Replace the defaults with the following rules, then click **Publish**.
 
